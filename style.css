@@ -1,5 +1,5 @@
 .wrapper {
-  background: url(img/fon.svg);
+  background: no-repeat url(img/fon.svg);
 }
 
 .header {
@@ -9,6 +9,15 @@
   justify-content: space-between;
   padding: 80px 110px 80px 190px;
   margin-bottom: 57px;
+}
+
+.burger_menu {
+  display: none;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 4px;
+  background-color: #fcf5ed;
+  cursor: pointer;
 }
 
 .menu {
@@ -102,10 +111,6 @@
 }
 
   @media (max-width: 1635px) {
-    /* .wrapper { */
-      /* background: url(img/fon2.svg); */
-    /* } */
-
     .header {
       padding: 57px 74px 57px 133px;
       margin-bottom: 40px;
@@ -167,14 +172,19 @@
       position: absolute;
       top: 277px;
       left: 740px;
+      right: 0;
     }
 
     .user__img_additionall {
       margin-right: 24px;
     }
 
-    .user__img_additionall:last-child {
+    .user__img_additionall_big:last-child {
       margin-right: 0;
+    }
+
+    .user__img_additionall_smoll {
+      display: none;
     }
   }
 
@@ -201,6 +211,23 @@
     .main__button {
       left: 53px;
     }
+
+    .user_additionall {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: absolute;
+      top: 277px;
+      left: 510px;
+    }
+
+    .user__img_additionall_big {
+      display: none;
+    }
+
+    .user__img_additionall_smoll {
+      display: block;
+    }
   }
 
   @media (max-width: 961px) {
@@ -212,11 +239,19 @@
       display: none;
     }
 
-    /* .header { */
-      /* padding: 35px 30px 35px 33px; */
-      /* margin-bottom: 24px; */
+    .user_additionall {
+      display: none;
+    }
+
+    .burger {
+      padding-top: 14px;
+    }
+
+    .burger_menu {
+      display: block;
     }
   }
+
 
   @media (max-width: 375px) {
     .wrapper {
@@ -224,8 +259,8 @@
     }
 
     .header {
-      padding: 35px 30px 35px 33px;
-      margin-bottom: 24px;
+      padding: 35px 25px 35px 33px;
+      margin-bottom: 23px;
     }
 
     .main__title {
@@ -237,7 +272,7 @@
     .main__subtitle {
       font: bold 60px/79px 'pt_serifbold', arial, helvetica, sans-serif;
       left: 75px;
-      bottom: 300px;
+      top: 290px;
     }
 
     .main__text {
